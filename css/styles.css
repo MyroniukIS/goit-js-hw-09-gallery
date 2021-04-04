@@ -1,0 +1,178 @@
+:root {
+  --primery-background-color: #ffffff;
+  --secondary-background-color: #2f303a;
+  --third-background-color: #f5f4fa;
+  --primery-color: #757575;
+  --secondary-color: #ffffff;
+  --title-color: #212121;
+  --logoheader-color: #000000;
+  --link-color: #ffffff;
+  --secondary-link-color: rgba(255, 255, 255, 0.6);
+  --accent-link-color: #2196f3;
+}
+
+body {
+  background: var(--primery-background-color);
+  color: var(--primery-color);
+}
+
+/* Убираем маркеры в списках */
+.list {
+  list-style: none;
+}
+
+/* Убираем поддчёркивания ссылок */
+.link {
+  text-decoration: none;
+}
+
+/* Button */
+.button {
+}
+
+.button.primery {
+  background: var(--accent-link-color);
+  color: var(--link-color);
+}
+
+.button.primery:hover,
+.button.primery:focus {
+  background: var(--link-color);
+  color: var(--accent-link-color);
+}
+
+.button.secondary {
+  background-color: var(--link-color);
+  color: var(--accent-link-color);
+}
+
+.button.secondary:hover,
+.button.secondary:focus {
+  background: var(--accent-link-color);
+  color: var(--link-color);
+}
+
+/* ---------- Header ---------- */
+
+.header {
+}
+
+/* Логотип в хедере */
+.logoheader {
+  color: var(--logoheader-color);
+}
+
+.logoheader:hover,
+.logoheader:focus {
+  color: var(--accent-link-color);
+}
+
+/* "Web" в логотипе в хедере */
+.logoheader-half {
+  color: var(--accent-link-color);
+}
+
+.logoheader-half:hover,
+.logoheader-half:focus {
+  color: var(--logoheader-color);
+}
+
+/* Navigation */
+.site-nav .link.current {
+  color: var(--accent-link-color);
+}
+
+/* Ссылки хедера */
+.header-link {
+  color: var(--title-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-link-color);
+}
+
+/* ---------- Main ---------- */
+
+/* Section Hero */
+.hero {
+  background: var(--secondary-background-color);
+}
+
+.hero-title {
+  color: var(--secondary-color);
+}
+
+/* Rest Sections */
+.section {
+  color: var(--secondary-color);
+}
+
+.section-title {
+  color: var(--title-color);
+}
+
+/* Section Features */
+.features-list {
+}
+
+.features-list .title {
+  color: var(--title-color);
+}
+
+/* Section Team */
+.team {
+  background: var(--third-background-color);
+}
+
+.team-list {
+}
+
+.team-list .title {
+  color: var(--title-color);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--secondary-background-color);
+}
+
+/* Логотип в футере */
+.logofooter {
+  color: var(--link-color);
+}
+
+.logofooter:hover,
+.logofooter:focus {
+  color: var(--accent-link-color);
+}
+
+/* "Web" в логотипе в футере */
+.logofooter-half {
+  color: var(--accent-link-color);
+}
+
+.logofooter-half:hover,
+.logofooter-half:focus {
+  color: var(--link-color);
+}
+
+/* Контакты футера */
+.footer-address {
+  color: var(--link-color);
+}
+
+.footer-address:hover,
+.footer-address:focus {
+  color: var(--accent-link-color);
+}
+
+.footer-link {
+  color: var(--secondary-link-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-link-color);
+}
