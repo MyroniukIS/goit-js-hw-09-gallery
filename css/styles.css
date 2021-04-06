@@ -52,29 +52,24 @@ body {
   color: var(--link-color);
 }
 
+/* "Web" в логотипе*/
+.logo-web {
+  color: var(--accent-link-color);
+}
+
 /* ---------- Header ---------- */
 
 .header {
 }
 
 /* Логотип в хедере */
-.logoheader {
+.logo-header {
   color: var(--logoheader-color);
 }
 
-.logoheader:hover,
-.logoheader:focus {
-  color: var(--accent-link-color);
-}
-
-/* "Web" в логотипе в хедере */
-.logoheader-half {
-  color: var(--accent-link-color);
-}
-
-.logoheader-half:hover,
-.logoheader-half:focus {
-  color: var(--logoheader-color);
+.logo-header:hover,
+.logo-header:focus {
+  text-shadow: 2px 2px 4px #000000;
 }
 
 /* Navigation */
@@ -92,7 +87,42 @@ body {
   color: var(--accent-link-color);
 }
 
-/* ---------- Main ---------- */
+/* ---------- Footer ---------- */
+
+.footer {
+  background: var(--secondary-background-color);
+}
+
+/* Логотип в футере */
+.logo-footer {
+  color: var(--link-color);
+}
+
+.logo-footer:hover,
+.logo-footer:focus {
+  text-shadow: 2px 2px 4px #ffffff;
+}
+
+/* Контакты футера */
+.footer-address {
+  color: var(--link-color);
+}
+
+.footer-address:hover,
+.footer-address:focus {
+  color: var(--accent-link-color);
+}
+
+.footer-link {
+  color: var(--secondary-link-color);
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: var(--accent-link-color);
+}
+
+/* ---------- Studio ---------- */
 
 /* Section Hero */
 .hero {
@@ -132,47 +162,7 @@ body {
   color: var(--title-color);
 }
 
-/* ---------- Footer ---------- */
+/* ---------- Portfolio ---------- */
 
-.footer {
-  background: var(--secondary-background-color);
-}
-
-/* Логотип в футере */
-.logofooter {
-  color: var(--link-color);
-}
-
-.logofooter:hover,
-.logofooter:focus {
-  color: var(--accent-link-color);
-}
-
-/* "Web" в логотипе в футере */
-.logofooter-half {
-  color: var(--accent-link-color);
-}
-
-.logofooter-half:hover,
-.logofooter-half:focus {
-  color: var(--link-color);
-}
-
-/* Контакты футера */
-.footer-address {
-  color: var(--link-color);
-}
-
-.footer-address:hover,
-.footer-address:focus {
-  color: var(--accent-link-color);
-}
-
-.footer-link {
-  color: var(--secondary-link-color);
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--accent-link-color);
+.filter {
 }
