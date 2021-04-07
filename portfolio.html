@@ -9,21 +9,33 @@
       name="description"
       content="Кейсы по созданию и продвижению сайтов от компании WebStudio. Оцените наши выполненные работы"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/portfolio.css" />
   </head>
   <body>
     <header class="header list">
       <nav>
-        <a href="./index.html" lang="en" class="logo-header link"><span class="logo-web">Web</span>Studio</a>
+        <a href="./index.html" lang="en" class="logo link">Web<span class="header-logo">Studio</span></a>
 
-        <ul class="site-nav list">
-          <li><a href="./index.html" class="link header-link">Студия</a></li>
-          <li><a href="./portfolio.html" class="link current header-link">Портфолио</a></li>
-          <li><a href="#contacts" class="link header-link">Контакты</a></li>
+        <ul class="list">
+          <li><a href="./index.html" class="link header-nav">Студия</a></li>
+          <li><a href="./portfolio.html" class="link header-nav current">Портфолио</a></li>
+          <li><a href="#contacts" class="link header-nav">Контакты</a></li>
         </ul>
       </nav>
 
-      <ul class="auth-nav list">
+      <ul class="list">
         <li><a href="mailto:info@devstudio.com" class="link header-link">info@devstudio.com</a></li>
         <li><a href="tel:+380961111111" class="link header-link">+38 096 111 11 11</a></li>
       </ul>
@@ -31,7 +43,7 @@
 
     <main>
       <!-- Section Portfolio -->
-      <section>
+      <section class="section">
         <h1 class="section-title">Портфолио</h1>
 
         <!-- Filter -->
@@ -52,36 +64,36 @@
               width="370"
               height="294"
             />
-            <h2 class="section-title">Технокряк</h2>
-            <p>Веб-сайт</p>
+            <h2 class="card-title">Технокряк</h2>
+            <p class="card-signature">Веб-сайт</p>
             <p></p>
           </li>
 
           <li>
             <img src="./images/portfolio/poster.jpg" alt="Два баскетболиста в игре с мячом" width="370" height="294" />
-            <h2 class="section-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
-            <p>Дизайн</p>
+            <h2 class="card-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+            <p class="card-signature">Дизайн</p>
             <p></p>
           </li>
 
           <li>
             <img src="./images/portfolio/restaurant.jpg" alt="Эмблема ресторана Сеафут" width="370" height="294" />
-            <h2 class="section-title">Ресторан <span lang="en">Seafood</span></h2>
-            <p>Приложение</p>
+            <h2 class="card-title">Ресторан <span lang="en">Seafood</span></h2>
+            <p class="card-signature">Приложение</p>
             <p></p>
           </li>
 
           <li>
             <img src="./images/portfolio/prime.jpg" alt="Наушники" width="370" height="294" />
-            <h2 class="section-title">Проект <span lang="en">Prime</span></h2>
-            <p>Маркетинг</p>
+            <h2 class="card-title">Проект <span lang="en">Prime</span></h2>
+            <p class="card-signature">Маркетинг</p>
             <p></p>
           </li>
 
           <li>
             <img src="./images/portfolio/boxes.jpg" alt="Две коробки" width="370" height="294" />
-            <h2 class="section-title">Проект <span lang="en">Boxes</span></h2>
-            <p>Приложение</p>
+            <h2 class="card-title">Проект <span lang="en">Boxes</span></h2>
+            <p class="card-signature">Приложение</p>
             <p></p>
           </li>
 
@@ -92,22 +104,22 @@
               width="370"
               height="294"
             />
-            <h2 class="section-title" lang="en">Inspiration has no Borders</h2>
-            <p>Веб-сайт</p>
+            <h2 class="card-title" lang="en">Inspiration has no Borders</h2>
+            <p class="card-signature">Веб-сайт</p>
             <p></p>
           </li>
 
           <li>
             <img src="./images/portfolio/limited-edition.jpg" alt="Разворот журнала" width="370" height="294" />
-            <h2 class="section-title">Издание <span lang="en">Limited Edition</span></h2>
-            <p>Дизайн</p>
+            <h2 class="card-title">Издание <span lang="en">Limited Edition</span></h2>
+            <p class="card-signature">Дизайн</p>
             <p></p>
           </li>
 
           <li>
             <img src="./images/portfolio/lab.jpg" alt="Этикетка на шнуре" width="370" height="294" />
-            <h2 class="section-title">Проект <span lang="en">LAB</span></h2>
-            <p>Маркетинг</p>
+            <h2 class="card-title">Проект <span lang="en">LAB</span></h2>
+            <p class="card-signature">Маркетинг</p>
             <p></p>
           </li>
 
@@ -118,8 +130,8 @@
               width="370"
               height="294"
             />
-            <h2 class="section-title" lang="en">Growing Business</h2>
-            <p>Приложение</p>
+            <h2 class="card-title" lang="en">Growing Business</h2>
+            <p class="card-signature">Приложение</p>
             <p></p>
           </li>
         </ul>
@@ -128,7 +140,7 @@
 
     <footer>
       <div class="footer list">
-        <a href="./index.html" lang="en" class="logo-footer link"><span class="logo-web">Web</span>Studio</a>
+        <a href="./index.html" lang="en" class="logo link">Web<span class="footer-logo">Studio</span></a>
 
         <address id="contacts">
           <ul class="list">
