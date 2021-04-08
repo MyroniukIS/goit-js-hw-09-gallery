@@ -5,6 +5,7 @@
 
 .hero .section-title {
   color: var(--secondary-color);
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -18,11 +19,15 @@
 
 .features-title {
   color: var(--title-color);
-  font-weight: bold;
-  font-size: 14px;
+
+  font-weight: 700;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: left;
+}
+
+.features-text {
+  text-align: left;
 }
 
 /* Section Activities */
@@ -32,16 +37,13 @@
 /* Section Team */
 .team {
   background: var(--third-background-color);
+
   font-size: 16px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .team-title {
   color: var(--title-color);
-  font-weight: 500;
-}
 
-.team-position {
-  font-weight: 400;
+  font-weight: 500;
 }

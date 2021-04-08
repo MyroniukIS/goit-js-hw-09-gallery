@@ -2,17 +2,21 @@
   --primery-background-color: #ffffff;
   --secondary-background-color: #2f303a;
   --third-background-color: #f5f4fa;
+
   --primery-color: #757575;
   --secondary-color: #ffffff;
   --title-color: #212121;
-  --link-color: #ffffff;
-  --accent-link-color: #2196f3;
+  --accent-color: #2196f3;
+
+  --main-font: 'Roboto', sans-serif;
+  --title-font: 'Raleway', sans-serif;
 }
 
 body {
   background: var(--primery-background-color);
   color: var(--primery-color);
-  font-family: 'Roboto', sans-serif;
+
+  font-family: var(--main-font);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -31,11 +35,14 @@ body {
 .button {
   font-family: inherit;
   font-size: 16px;
+
+  cursor: pointer;
 }
 
 .button.primery {
-  background: var(--accent-link-color);
-  color: var(--link-color);
+  background: var(--accent-color);
+  color: var(--secondary-color);
+
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
@@ -43,36 +50,36 @@ body {
 
 .button.primery:hover,
 .button.primery:focus {
-  background: var(--link-color);
-  color: var(--accent-link-color);
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
 }
 
 .button.secondary {
-  background-color: var(--link-color);
-  color: var(--accent-link-color);
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+
   font-weight: 500;
   line-height: 1.62;
-  letter-spacing: 0.03em;
 }
 
 .button.secondary:hover,
 .button.secondary:focus {
-  background: var(--accent-link-color);
-  color: var(--link-color);
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
 }
 
 .logo {
-  color: var(--accent-link-color);
-  font-family: 'Raleway', sans-serif;
+  color: var(--accent-color);
+
+  font-family: var(--title-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
-  letter-spacing: 0.03em;
 }
 
 .logo:hover,
 .logo:focus {
-  text-shadow: 2px 2px 4px var(--accent-link-color);
+  text-shadow: 2px 2px 4px var(--accent-color);
 }
 
 .section {
@@ -81,78 +88,19 @@ body {
 
 .section-title {
   color: var(--title-color);
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-  letter-spacing: 0.03em;
 }
 
-/* ---------- Header ---------- */
-.header {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-}
-
-/* Логотип в хедере */
-.header-logo {
-  color: #000000;
-}
-
-/* Navigation */
-.header-nav {
-  color: var(--title-color);
-}
-
-.header-nav:hover,
-.header-nav:focus {
-  color: var(--accent-link-color);
-}
-
-.header-nav.current {
-  color: var(--accent-link-color);
-}
-
-/* Контакты */
-.header-link {
-  color: #757575;
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-link-color);
-}
-
-/* ---------- Footer ---------- */
-.footer {
-  background: var(--secondary-background-color);
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
-
-/* Логотип в футере */
-.footer-logo {
-  color: var(--link-color);
-}
-
-/* Контакты */
-.footer-address {
-  color: var(--link-color);
-}
-
-.footer-address:hover,
-.footer-address:focus {
-  color: var(--accent-link-color);
-}
-
-.footer-link {
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--accent-link-color);
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
