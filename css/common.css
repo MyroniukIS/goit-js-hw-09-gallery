@@ -50,13 +50,13 @@ body {
 
 .button.primery:hover,
 .button.primery:focus {
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
+  background-color: var(--third-background-color);
+  color: var(--title-color);
 }
 
 .button.secondary {
-  background-color: var(--secondary-color);
-  color: var(--accent-color);
+  background-color: var(--third-background-color);
+  color: var(--title-color);
 
   font-weight: 500;
   line-height: 1.62;
