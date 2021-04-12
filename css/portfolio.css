@@ -1,7 +1,13 @@
 .filter {
 }
 
-.card-title {
+.gallery img {
+  margin-bottom: 20px;
+}
+
+.gallery-title {
+  margin-bottom: 4px;
+
   color: var(--title-color);
 
   font-weight: 700;
@@ -11,7 +17,9 @@
   text-align: left;
 }
 
-.card-signature {
+.gallery-signature {
+  margin-bottom: 20px;
+
   font-size: 16px;
   line-height: 1.87;
   text-align: left;
