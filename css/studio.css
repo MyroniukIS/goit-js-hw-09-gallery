@@ -4,6 +4,8 @@
 }
 
 .hero .section-title {
+  margin-bottom: 30px;
+
   color: var(--secondary-color);
 
   font-weight: 900;
@@ -15,9 +17,12 @@
 
 /* Section Features */
 .features {
+  padding-bottom: 0;
 }
 
 .features-title {
+  margin-bottom: 10px;
+
   color: var(--title-color);
 
   font-weight: 700;
@@ -36,17 +41,29 @@
 }
 
 /* Section Team */
-.team {
+.section.team {
   background: var(--third-background-color);
+}
 
+.team {
   font-size: 16px;
   line-height: 1.19;
 }
 
+.team img {
+  margin-bottom: 30px;
+}
+
 .team-title {
+  margin-bottom: 10px;
+
   color: var(--title-color);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+}
+
+.team p {
+  margin-bottom: 30px;
 }

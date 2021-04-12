@@ -12,16 +12,6 @@
   --title-font: 'Raleway', sans-serif;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 body {
   background: var(--primery-background-color);
   color: var(--primery-color);
@@ -31,24 +21,16 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
-  margin: 0;
 }
 
-.conteiner {
-  width: 1200px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-ul,
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+ul,
+p {
   padding: 0;
   margin: 0;
 }
@@ -125,9 +107,18 @@ h6 {
 
 .section {
   text-align: center;
+  padding: 94px 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .section-title {
+  margin-bottom: 50px;
+
   color: var(--title-color);
 
   font-weight: 700;
