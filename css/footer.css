@@ -2,6 +2,10 @@
   background: var(--secondary-background-color);
 }
 
+.footer .link {
+  font-style: normal;
+}
+
 .footer-logo,
 .footer-address {
   color: var(--secondary-color);
