@@ -27,20 +27,20 @@
   </head>
   <body>
     <header class="header list">
-      <div class="container">
-        <nav>
+      <div class="container flex-box">
+        <nav class="flex-box">
           <a href="./index.html" lang="en" class="logo link">Web<span class="header-logo">Studio</span></a>
 
-          <ul class="list">
-            <li><a href="./index.html" class="link header-nav">Студия</a></li>
-            <li><a href="./portfolio.html" class="link header-nav current">Портфолио</a></li>
-            <li><a href="#contacts" class="link header-nav">Контакты</a></li>
+          <ul class="header-nav list">
+            <li class="item"><a href="./index.html" class="link">Студия</a></li>
+            <li class="item"><a href="./portfolio.html" class="link current">Портфолио</a></li>
+            <li class="item"><a href="#contacts" class="link">Контакты</a></li>
           </ul>
         </nav>
 
-        <ul class="list">
-          <li><a href="mailto:info@devstudio.com" class="link header-link">info@devstudio.com</a></li>
-          <li><a href="tel:+380961111111" class="link header-link">+38 096 111 11 11</a></li>
+        <ul class="header-link list">
+          <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+          <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
         </ul>
       </div>
     </header>
@@ -52,97 +52,115 @@
           <h1 class="section-title visually-hidden">Портфолио</h1>
 
           <!-- Filter -->
-          <ul class="list">
-            <li><button type="button" class="button secondary">Все</button></li>
-            <li><button type="button" class="button secondary">Веб-сайты</button></li>
-            <li><button type="button" class="button secondary">Приложения</button></li>
-            <li><button type="button" class="button secondary">Дизайн</button></li>
-            <li><button type="button" class="button secondary">Маркетинг</button></li>
+          <ul class="filter list flex-box">
+            <li class="item"><button type="button" class="button secondary">Все</button></li>
+            <li class="item"><button type="button" class="button secondary">Веб-сайты</button></li>
+            <li class="item"><button type="button" class="button secondary">Приложения</button></li>
+            <li class="item"><button type="button" class="button secondary">Дизайн</button></li>
+            <li class="item"><button type="button" class="button secondary">Маркетинг</button></li>
           </ul>
 
           <!-- Gallery -->
-          <ul class="gallery list">
-            <li>
+          <ul class="gallery list flex-box">
+            <li class="item">
               <img
                 src="./images/portfolio/technical-crack.jpg"
                 alt="Приложение на экране лаптопа"
                 width="370"
                 height="294"
               />
-              <h2 class="gallery-title">Технокряк</h2>
-              <p class="gallery-signature">Веб-сайт</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Технокряк</h2>
+                <p class="gallery-signature">Веб-сайт</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/portfolio/poster.jpg"
                 alt="Два баскетболиста в игре с мячом"
                 width="370"
                 height="294"
               />
-              <h2 class="gallery-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
-              <p class="gallery-signature">Дизайн</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Постер <span lang="en">New Orlean vs Golden Star</span></h2>
+                <p class="gallery-signature">Дизайн</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img src="./images/portfolio/restaurant.jpg" alt="Эмблема ресторана Сеафут" width="370" height="294" />
-              <h2 class="gallery-title">Ресторан <span lang="en">Seafood</span></h2>
-              <p class="gallery-signature">Приложение</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Ресторан <span lang="en">Seafood</span></h2>
+                <p class="gallery-signature">Приложение</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img src="./images/portfolio/prime.jpg" alt="Наушники" width="370" height="294" />
-              <h2 class="gallery-title">Проект <span lang="en">Prime</span></h2>
-              <p class="gallery-signature">Маркетинг</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Проект <span lang="en">Prime</span></h2>
+                <p class="gallery-signature">Маркетинг</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img src="./images/portfolio/boxes.jpg" alt="Две коробки" width="370" height="294" />
-              <h2 class="gallery-title">Проект <span lang="en">Boxes</span></h2>
-              <p class="gallery-signature">Приложение</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Проект <span lang="en">Boxes</span></h2>
+                <p class="gallery-signature">Приложение</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/portfolio/inspiration.jpg"
                 alt="Приложение на экране монитора компьютера"
                 width="370"
                 height="294"
               />
-              <h2 class="gallery-title" lang="en">Inspiration has no Borders</h2>
-              <p class="gallery-signature">Веб-сайт</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title" lang="en">Inspiration has no Borders</h2>
+                <p class="gallery-signature">Веб-сайт</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img src="./images/portfolio/limited-edition.jpg" alt="Разворот журнала" width="370" height="294" />
-              <h2 class="gallery-title">Издание <span lang="en">Limited Edition</span></h2>
-              <p class="gallery-signature">Дизайн</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Издание <span lang="en">Limited Edition</span></h2>
+                <p class="gallery-signature">Дизайн</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img src="./images/portfolio/lab.jpg" alt="Этикетка на шнуре" width="370" height="294" />
-              <h2 class="gallery-title">Проект <span lang="en">LAB</span></h2>
-              <p class="gallery-signature">Маркетинг</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title">Проект <span lang="en">LAB</span></h2>
+                <p class="gallery-signature">Маркетинг</p>
+                <p></p>
+              </div>
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/portfolio/growing-business.jpg"
                 alt="Приложение &laquo;Гроуинг Бизнесс&raquo; на экране лаптопа"
                 width="370"
                 height="294"
               />
-              <h2 class="gallery-title" lang="en">Growing Business</h2>
-              <p class="gallery-signature">Приложение</p>
-              <p></p>
+              <div class="label">
+                <h2 class="gallery-title" lang="en">Growing Business</h2>
+                <p class="gallery-signature">Приложение</p>
+                <p></p>
+              </div>
             </li>
           </ul>
         </div>

@@ -20,6 +20,10 @@
   padding-bottom: 0;
 }
 
+.features-list .item {
+  flex-basis: 270px;
+}
+
 .features-title {
   margin-bottom: 10px;
 

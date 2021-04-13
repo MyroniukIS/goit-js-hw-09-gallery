@@ -12,6 +12,15 @@
   --title-font: 'Raleway', sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
 body {
   background: var(--primery-background-color);
   color: var(--primery-color);
@@ -43,11 +52,13 @@ img {
 
 .list {
   list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 .link {
   text-decoration: none;
-  font-style: normal;
+  color: inherit;
 }
 
 .button {
@@ -120,6 +131,10 @@ img {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.flex-box {
+  display: flex;
 }
 
 .section-title {
