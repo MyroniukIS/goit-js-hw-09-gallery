@@ -2,8 +2,23 @@
   background: var(--secondary-background-color);
 }
 
-.footer .link {
+.footer .container {
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-nav {
+  display: block;
+  margin-top: 20px;
+}
+
+.footer-nav .item {
   font-style: normal;
+}
+
+.footer-nav .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .footer-logo,
