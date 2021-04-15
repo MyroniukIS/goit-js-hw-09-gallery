@@ -2,12 +2,14 @@
   background: var(--secondary-background-color);
 }
 
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer .contacts {
   display: block;
   width: 270px;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  padding-right: auto;
 }
 
 .footer-nav {
