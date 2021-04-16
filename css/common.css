@@ -10,6 +10,8 @@
 
   --main-font: 'Roboto', sans-serif;
   --title-font: 'Raleway', sans-serif;
+
+  --gallery-gap: 30px;
 }
 
 html {
