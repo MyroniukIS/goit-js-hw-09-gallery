@@ -1,10 +1,8 @@
 .footer {
-  background: var(--secondary-background-color);
-}
-
-.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background: var(--secondary-background-color);
 }
 
 .footer .contacts {
