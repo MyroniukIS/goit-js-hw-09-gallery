@@ -9,21 +9,15 @@
 
 .gallery {
   flex-wrap: wrap;
+  margin-top: calc(-1 * (var(--gallery-gap)));
+  margin-left: calc(-1 * (var(--gallery-gap)));
 }
 
 .gallery .item {
-  flex-basis: calc((100% - (3 - 1) * 30px) / 3);
+  flex-basis: calc(100% / 3 - var(--gallery-gap));
   border: 1px solid #eeeeee;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
-.gallery .item:nth-child(3n) {
-  margin-right: 0;
-}
-
-.gallery .item:nth-last-child(-n + 3) {
-  margin-bottom: 0;
+  margin-top: var(--gallery-gap);
+  margin-left: var(--gallery-gap);
 }
 
 .gallery .label {
