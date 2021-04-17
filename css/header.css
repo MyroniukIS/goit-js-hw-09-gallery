@@ -30,17 +30,14 @@
   margin-left: auto;
 }
 
-/* .header-nav .item + .item {
-  margin-right: 50px;
-} */
 .header-nav .item:not(:last-child),
 .header-link .item:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 
 .header-nav .link,
 .header-link .link {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -57,4 +54,32 @@
 .header-link .link:hover,
 .header-link .link:focus {
   color: var(--accent-color);
+}
+
+.mailto::before {
+  content: ' ';
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  background-image: url(../images/header/envelope.png);
+  background-size: contain;
+  align-self: center;
+}
+
+.mailto:hover::before {
+  background-image: url(../images/header/envelope-hover.png);
+}
+
+.tel::before {
+  content: ' ';
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  background-image: url(../images/header/smartphone.png);
+  background-size: contain;
+  align-self: center;
+}
+
+.tel:hover::before {
+  background-image: url(../images/header/smartphone-hover.png);
 }
