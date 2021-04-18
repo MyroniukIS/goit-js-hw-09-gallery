@@ -176,22 +176,13 @@
   background-color: var(--accent-color);
 }
 
+.link-social .icon {
+  display: flex;
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
 .link-social:hover .icon {
   fill: var(--secondary-color);
 }
-
-/* .team .link-instagram {
-  background-image: url(../images/team/link/instagram.svg);
-} */
-
-/* .team .link-twitter {
-  background-image: url(../images/team/link/twitter.svg);
-} */
-
-/* .team .link-facebook {
-  background-image: url(../images/team/link/facebook.svg);
-} */
-
-/* .team .link-linkedin {
-  background-image: url(../images/team/link/linkedin.svg);
-} */
