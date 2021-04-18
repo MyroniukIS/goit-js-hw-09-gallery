@@ -8,7 +8,7 @@
   margin-right: auto;
 
   background: var(--secondary-background-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/overlay.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/overlay.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -45,6 +45,33 @@
   flex-basis: calc(100% / 4 - var(--gallery-gap));
   margin-top: var(--gallery-gap);
   margin-left: var(--gallery-gap);
+}
+
+.features-list .item::before {
+  display: block;
+  height: 120px;
+  content: '';
+  margin-bottom: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--third-background-color);
+  border-radius: 4px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/features/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/features/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/features/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/features/astronaut.svg);
 }
 
 .features-title {
@@ -102,7 +129,7 @@
 
 .team .label {
   padding-top: var(--gallery-gap);
-  padding-bottom: var(--gallery-gap);
+  padding-bottom: 16px;
 }
 
 .team-title {
@@ -115,5 +142,56 @@
   line-height: 1.19;
 }
 
-.team-signature {
+.team .block-social {
+  padding-top: 0px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
+
+.team-list .list-social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.team .link-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.team .link-social:not(:nth-last-of-type(1)) {
+  margin-right: 10px;
+}
+
+.team .link-social:hover {
+  background-color: var(--accent-color);
+}
+
+.link-social:hover .icon {
+  fill: var(--secondary-color);
+}
+
+/* .team .link-instagram {
+  background-image: url(../images/team/link/instagram.svg);
+} */
+
+/* .team .link-twitter {
+  background-image: url(../images/team/link/twitter.svg);
+} */
+
+/* .team .link-facebook {
+  background-image: url(../images/team/link/facebook.svg);
+} */
+
+/* .team .link-linkedin {
+  background-image: url(../images/team/link/linkedin.svg);
+} */

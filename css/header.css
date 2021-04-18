@@ -57,29 +57,29 @@
 }
 
 .mailto::before {
-  content: ' ';
+  content: '';
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../images/header/envelope.png);
+  background-image: url(../images/header/envelope.svg);
   background-size: contain;
   align-self: center;
 }
 
 .mailto:hover::before {
-  background-image: url(../images/header/envelope-hover.png);
+  background-image: url(../images/header/envelope-hover.svg);
 }
 
 .tel::before {
-  content: ' ';
+  content: '';
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  background-image: url(../images/header/smartphone.png);
+  background-image: url(../images/header/smartphone.svg);
   background-size: contain;
   align-self: center;
 }
 
 .tel:hover::before {
-  background-image: url(../images/header/smartphone-hover.png);
+  background-image: url(../images/header/smartphone-hover.svg);
 }
