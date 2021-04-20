@@ -10,6 +10,16 @@
   align-items: center;
 }
 
+.header .logo:hover,
+.header .logo:focus {
+  color: #000000;
+}
+
+.logo:hover .header-logo,
+.logo:focus .header-logo {
+  color: var(--accent-color);
+}
+
 .header .logo {
   display: block;
   padding-top: 24px;
@@ -56,18 +66,19 @@
   color: var(--accent-color);
 }
 
-.mailto::before {
+/* .mailto::before {
   content: '';
   width: 16px;
   height: 12px;
   margin-right: 10px;
-  background-image: url(../images/header/envelope.svg);
+  background-image: url(../images/icons/icons.svg#icon-envelope);
   background-size: contain;
   align-self: center;
+  fill: var(--primery-color);
 }
 
 .mailto:hover::before {
-  background-image: url(../images/header/envelope-hover.svg);
+  fill: var(--accent-color);
 }
 
 .tel::before {
@@ -75,11 +86,12 @@
   width: 10px;
   height: 16px;
   margin-right: 10px;
-  background-image: url(../images/header/smartphone.svg);
+  background-image: url(../images/icons/icons.svg#icon-smartphone);
   background-size: contain;
   align-self: center;
+  fill: var(--primery-color);
 }
 
 .tel:hover::before {
-  background-image: url(../images/header/smartphone-hover.svg);
-}
+  fill: var(--accent-color);
+} */

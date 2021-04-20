@@ -28,6 +28,11 @@
   color: var(--secondary-color);
 }
 
+.footer .logo:hover,
+.footer .logo:focus {
+  color: var(--secondary-color);
+}
+
 .logo:hover .footer-logo,
 .logo:focus .footer-logo {
   color: var(--accent-color);
@@ -44,6 +49,12 @@
   color: var(--accent-color);
 }
 
+.call {
+  width: 270px;
+  margin-left: 30px;
+  padding-top: 12px;
+}
+
 .call-paragraph {
   margin-bottom: 20px;
 
@@ -56,46 +67,14 @@
   text-align: left;
 }
 
-.call {
-  width: 270px;
-  margin-left: 30px;
-  padding-top: 12px;
-}
-
-.call .block-social {
-}
-
-.call .list-social {
-  display: flex;
-  flex-direction: row;
-}
-
 .call .link-social {
-  height: 44px;
-  width: 44px;
-  border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.call .link-social:not(:nth-last-of-type(1)) {
-  margin-right: 10px;
+.call .link-social:hover {
+  background-color: var(--accent-color);
 }
 
-.call .link-instagram {
-  background-image: url(../images/footer/instagram-w.svg);
-}
-
-.call .link-twitter {
-  background-image: url(../images/footer/twitter-w.svg);
-}
-
-.call .link-facebook {
-  background-image: url(../images/footer/facebook-w.svg);
-}
-
-.call .link-linkedin {
-  background-image: url(../images/footer/linkedin-w.svg);
+.call .icon {
+  fill: var(--secondary-color);
 }
