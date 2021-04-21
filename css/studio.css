@@ -153,10 +153,43 @@
   background-color: var(--secondary-color);
 }
 
-.team .link-social:hover {
+.team .link-social:hover,
+.team .link-social:focus {
   background-color: var(--accent-color);
 }
 
 .team .icon {
   fill: #afb1b8;
+}
+
+/* Section Clients */
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-list .item:not(:nth-last-of-type(1)) {
+  margin-right: var(--gallery-gap);
+}
+
+.clients-list .icon {
+  display: flex;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  justify-content: center;
+  align-items: center;
+  fill: #afb1b8;
+}
+
+.clients-list .icon:hover,
+.clients-list .icon:focus {
+  border: 1px solid var(--accent-color);
+  fill: var(--accent-color);
+}
+
+.clients-svg {
+  width: 106px;
+  height: 60px;
 }
