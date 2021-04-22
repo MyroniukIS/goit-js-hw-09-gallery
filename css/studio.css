@@ -149,17 +149,14 @@
   padding-right: 32px;
 }
 
-.team .link-social {
-  background-color: var(--secondary-color);
-}
-
-.team .link-social:hover,
-.team .link-social:focus {
-  background-color: var(--accent-color);
-}
-
 .team .icon {
   fill: #afb1b8;
+}
+
+.team .icon:hover,
+.team .icon:focus {
+  background-color: var(--accent-color);
+  fill: var(--secondary-color);
 }
 
 /* Section Clients */

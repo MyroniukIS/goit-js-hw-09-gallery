@@ -55,7 +55,7 @@
 }
 
 .header-link .link {
-  color: #757575;
+  color: var(--primery-color);
 }
 
 .header-nav .link.current,
@@ -66,32 +66,15 @@
   color: var(--accent-color);
 }
 
-/* .mailto::before {
-  content: '';
+.address-icon {
   width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  background-image: url(../images/icons/icons.svg#icon-envelope);
-  background-size: contain;
-  align-self: center;
-  fill: var(--primery-color);
-}
-
-.mailto:hover::before {
-  fill: var(--accent-color);
-}
-
-.tel::before {
-  content: '';
-  width: 10px;
   height: 16px;
+
   margin-right: 10px;
-  background-image: url(../images/icons/icons.svg#icon-smartphone);
-  background-size: contain;
-  align-self: center;
   fill: var(--primery-color);
 }
 
-.tel:hover::before {
+.header-link .link:hover .address-icon,
+.header-link .link:focus .address-icon {
   fill: var(--accent-color);
-} */
+}

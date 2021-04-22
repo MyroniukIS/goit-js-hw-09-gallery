@@ -15,9 +15,18 @@
 
 .gallery .item {
   flex-basis: calc(100% / 3 - var(--gallery-gap));
-  border: 1px solid #eeeeee;
   margin-top: var(--gallery-gap);
   margin-left: var(--gallery-gap);
+}
+
+.gallery-link {
+  display: block;
+  border: 1px solid #eeeeee;
+}
+
+.gallery-link:hover,
+.gallery-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .gallery .label {
