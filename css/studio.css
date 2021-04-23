@@ -1,4 +1,4 @@
-/* Section Hero */
+/*#region  Section Hero */
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -30,8 +30,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+/*#endregion Section Hero */
 
-/* Section Features */
+/*#region Section Features */
 .features {
   padding-bottom: 0;
 }
@@ -89,8 +90,9 @@
 .features-text {
   text-align: left;
 }
+/*#endregion Section Features */
 
-/* Section Activities */
+/*#region Section Activities */
 .activities-list {
   margin-top: calc(-1 * (var(--gallery-gap)));
   margin-left: calc(-1 * (var(--gallery-gap)));
@@ -101,8 +103,9 @@
   margin-top: var(--gallery-gap);
   margin-left: var(--gallery-gap);
 }
+/*#endregion Section Activities */
 
-/* Section Team */
+/*#region Section Team */
 .team {
   font-size: 16px;
   line-height: 1.19;
@@ -158,8 +161,9 @@
   background-color: var(--accent-color);
   fill: var(--secondary-color);
 }
+/*#endregion Section Team */
 
-/* Section Clients */
+/*#region Section Clients */
 .clients-list {
   display: flex;
   justify-content: center;
@@ -190,3 +194,4 @@
   width: 106px;
   height: 60px;
 }
+/*#endregion Section Clients */
