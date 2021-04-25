@@ -49,9 +49,9 @@
 }
 
 .features-list .item::before {
+  content: '';
   display: block;
   height: 120px;
-  content: '';
   margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: center;
