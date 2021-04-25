@@ -41,10 +41,6 @@
   margin-left: auto;
 }
 
-.header-nav .item {
-  display: block;
-}
-
 .header-nav .item:not(:last-child),
 .header-link .item:not(:last-child) {
   margin-right: 30px;
@@ -53,7 +49,8 @@
 .header-nav .link {
   display: inline-flex;
   flex-direction: column;
-  padding-top: 32px;
+  height: 80px;
+  justify-content: end;
 
   color: var(--title-color);
 }
@@ -74,15 +71,19 @@
   color: var(--accent-color);
 }
 
-.header-nav .link.current::after {
+.header-nav .link::after {
   content: '';
   width: inherit;
   height: 4px;
   background-repeat: no-repeat;
-  background-position: bottom;
-  background-color: var(--accent-color);
+  background-position: center;
+  background-color: inherit;
   border-radius: 4px;
   margin-top: 28px;
+}
+
+.header-nav .link.current::after {
+  background-color: var(--accent-color);
 }
 
 .address-icon {
