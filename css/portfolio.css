@@ -34,7 +34,8 @@
   opacity: 1;
 }
 
-.gallery-link:hover .gallery-thumb::before {
+.gallery-link:hover .gallery-thumb::before,
+.gallery-link:focus .gallery-thumb::before {
   opacity: 1;
 }
 
