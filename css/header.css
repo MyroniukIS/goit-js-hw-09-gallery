@@ -1,5 +1,11 @@
 .header {
-  max-height: 80px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: var(--header-height);
+  z-index: 1;
+  background-color: var(--primery-background-color);
   border-bottom: 1px solid #ececec;
 
   font-weight: 500;

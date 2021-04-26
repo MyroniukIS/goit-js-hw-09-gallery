@@ -30,6 +30,36 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 528px;
+  min-height: 581px;
+  padding: 15px;
+
+  background-color: var(--primery-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
 /*#endregion Section Hero */
 
 /*#region Section Features */
@@ -102,6 +132,35 @@
   flex-basis: calc(100% / 3 - var(--gallery-gap));
   margin-top: var(--gallery-gap);
   margin-left: var(--gallery-gap);
+}
+
+.activities-thumb {
+  position: relative;
+}
+
+.activities-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 27px auto;
+
+  color: var(--secondary-color);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.activities-thumb::before {
+  display: inline-block;
+  content: '';
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
 }
 /*#endregion Section Activities */
 

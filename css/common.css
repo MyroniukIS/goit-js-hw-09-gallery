@@ -11,6 +11,7 @@
   --main-font: 'Roboto', sans-serif;
   --title-font: 'Raleway', sans-serif;
 
+  --header-height: 80px;
   --gallery-gap: 30px;
 }
 
@@ -19,6 +20,8 @@ html {
 }
 
 body {
+  padding-top: var(--header-height);
+
   background: var(--primery-background-color);
   color: var(--primery-color);
 
@@ -75,6 +78,7 @@ img {
   color: inherit;
 }
 
+/*#region Button */
 .button {
   display: inline-block;
   border: 0;
@@ -121,6 +125,21 @@ img {
   background-color: var(--accent-color);
   color: var(--secondary-color);
 }
+
+.button-modal {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: var(--primery-background-color);
+
+  cursor: pointer;
+}
+/*#endregion Button */
 
 .section {
   text-align: center;
