@@ -29,13 +29,15 @@
   text-shadow: 2px 2px 4px var(--accent-color);
 }
 
+.header-logo {
+  color: #000000;
+
+  transition: color var(--time-action) var(--time-distribution-function);
+}
+
 .logo:hover .header-logo,
 .logo:focus .header-logo {
   color: var(--accent-color);
-}
-
-.header-logo {
-  color: #000000;
 }
 
 .header-nav {
@@ -71,7 +73,10 @@
 
   color: var(--primery-color);
 
-  transition: color var(--time-action) var(--time-distribution-function);
+  transform: scale(1);
+
+  transition: color var(--time-action) var(--time-distribution-function),
+    transform var(--time-action) var(--time-distribution-function) var(--time-action);
 }
 
 .header-nav .link.current,
@@ -80,6 +85,11 @@
 .header-link .link:hover,
 .header-link .link:focus {
   color: var(--accent-color);
+}
+
+.header-link .link:hover,
+.header-link .link:focus {
+  transform: scale(1.1);
 }
 
 .header-nav .link::after {
@@ -92,12 +102,16 @@
   border-radius: 4px;
   margin-top: 28px;
 
-  transition: background-color var(--time-action) var(--time-distribution-function);
+  transform: scaleX(0);
+
+  transition: transform var(--time-action) var(--time-distribution-function);
 }
 
 .header-nav .link:hover::after,
 .header-nav .link.current::after {
   background-color: var(--accent-color);
+
+  transform: scaleX(1);
 }
 
 .address-icon {

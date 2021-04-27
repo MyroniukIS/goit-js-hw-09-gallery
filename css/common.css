@@ -177,7 +177,8 @@ img {
   font-size: 26px;
   line-height: 1.2;
 
-  transition: text-shadow var(--time-action) var(--time-distribution-function);
+  transition: color var(--time-action) var(--time-distribution-function),
+    text-shadow var(--time-action) var(--time-distribution-function) var(--time-action);
 }
 
 .list-social {
@@ -205,6 +206,8 @@ img {
   display: flex;
   width: 20px;
   height: 20px;
+
+  transition: fill var(--time-action) var(--time-distribution-function);
 }
 
 .icon:hover .social-icons-svg {
