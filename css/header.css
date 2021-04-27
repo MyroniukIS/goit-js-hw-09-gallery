@@ -17,20 +17,21 @@
   align-items: center;
 }
 
+.header .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
 .header .logo:hover,
 .header .logo:focus {
   color: #000000;
+  text-shadow: 2px 2px 4px var(--accent-color);
 }
 
 .logo:hover .header-logo,
 .logo:focus .header-logo {
   color: var(--accent-color);
-}
-
-.header .logo {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .header-logo {
@@ -59,6 +60,8 @@
   justify-content: end;
 
   color: var(--title-color);
+
+  transition: color var(--time-action) var(--time-distribution-function);
 }
 
 .header-link .link {
@@ -67,6 +70,8 @@
   padding-bottom: 32px;
 
   color: var(--primery-color);
+
+  transition: color var(--time-action) var(--time-distribution-function);
 }
 
 .header-nav .link.current,
@@ -86,8 +91,11 @@
   background-color: inherit;
   border-radius: 4px;
   margin-top: 28px;
+
+  transition: background-color var(--time-action) var(--time-distribution-function);
 }
 
+.header-nav .link:hover::after,
 .header-nav .link.current::after {
   background-color: var(--accent-color);
 }
@@ -98,6 +106,8 @@
 
   margin-right: 10px;
   fill: var(--primery-color);
+
+  transition: fill var(--time-action) var(--time-distribution-function);
 }
 
 .header-link .link:hover .address-icon,

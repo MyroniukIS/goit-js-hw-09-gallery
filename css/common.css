@@ -13,6 +13,9 @@
 
   --header-height: 80px;
   --gallery-gap: 30px;
+
+  --time-action: 250ms;
+  --time-distribution-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -173,6 +176,8 @@ img {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
+
+  transition: text-shadow var(--time-action) var(--time-distribution-function);
 }
 
 .list-social {
