@@ -59,7 +59,8 @@
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
+  width: 100%;
+  max-width: 528px;
   min-height: 581px;
   padding: 15px;
 
@@ -153,7 +154,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin: 27px auto;
+  padding: 27px 0;
 
   color: var(--secondary-color);
   font-size: 14px;

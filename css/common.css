@@ -137,6 +137,7 @@ img {
 
 .button-modal {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-left: auto;
   width: 30px;
