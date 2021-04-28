@@ -91,13 +91,17 @@ img {
   font-size: 16px;
 
   cursor: pointer;
+
+  transition: background-color var(--time-action) var(--time-distribution-function),
+    color var(--time-action) var(--time-distribution-function) var(--time-action),
+    box-shadow var(--time-action) var(--time-distribution-function) var(--time-action);
 }
 
 .button.primery {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  background: var(--accent-color);
+  background-color: var(--accent-color);
   color: var(--secondary-color);
 
   font-weight: 700;
@@ -112,6 +116,8 @@ img {
 }
 
 .button.secondary {
+  box-shadow: 0;
+
   padding: 6px 22px;
 
   background-color: var(--third-background-color);
@@ -141,6 +147,15 @@ img {
   background-color: var(--primery-background-color);
 
   cursor: pointer;
+
+  transform: rotateZ(0);
+
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function);
+}
+
+.button-modal:hover,
+.button-modal:focus {
+  transform: rotateZ(1turn);
 }
 /*#endregion Button */
 
@@ -181,6 +196,7 @@ img {
     text-shadow var(--time-action) var(--time-distribution-function) var(--time-action);
 }
 
+/*#region Social */
 .list-social {
   display: flex;
   flex-direction: row;
@@ -207,9 +223,15 @@ img {
   width: 20px;
   height: 20px;
 
-  transition: fill var(--time-action) var(--time-distribution-function);
+  transform: scale(1);
+
+  transition: fill var(--time-action) var(--time-distribution-function),
+    transform calc(var(--time-action) * 2) var(--time-distribution-function);
 }
 
 .icon:hover .social-icons-svg {
   fill: var(--secondary-color);
+
+  transform: scale(1.3);
 }
+/*#endregion Social */

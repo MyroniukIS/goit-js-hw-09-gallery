@@ -1,4 +1,4 @@
-/*#region  Section Hero */
+/*#region Section Hero */
 .hero {
   max-width: 1600px;
   height: 600px;
@@ -39,6 +39,10 @@
   height: 100%;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+
+  transition: opacity calc(var(--time-action) * 2) var(--time-distribution-function);
 }
 
 .backdrop.is-hidden {
@@ -46,11 +50,14 @@
   pointer-events: none;
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
 
   min-width: 528px;
   min-height: 581px;
@@ -59,6 +66,10 @@
   background-color: var(--primery-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function);
 }
 /*#endregion Section Hero */
 
@@ -213,6 +224,9 @@
 
 .team .icon {
   fill: #afb1b8;
+
+  transition: background-color calc(var(--time-action) * 2) var(--time-distribution-function),
+    fill var(--time-action) var(--time-distribution-function);
 }
 
 .team .icon:hover,
@@ -241,16 +255,33 @@
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
+
+  transform: scale(1);
+
+  transition: fill var(--time-action) var(--time-distribution-function),
+    border var(--time-action) var(--time-distribution-function),
+    transform calc(var(--time-action) * 2) var(--time-distribution-function);
 }
 
 .clients-list .icon:hover,
 .clients-list .icon:focus {
   border: 1px solid var(--accent-color);
   fill: var(--accent-color);
+
+  transform: scale(1.3);
 }
 
 .clients-svg {
   width: 106px;
   height: 60px;
+
+  transform: rotateY(0);
+}
+
+.clients-list .icon:hover .clients-svg,
+.clients-list .icon:focus .clients-svg {
+  transform: rotateY(1turn);
+
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function) var(--time-action);
 }
 /*#endregion Section Clients */

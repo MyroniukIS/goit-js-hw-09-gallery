@@ -121,10 +121,15 @@
   margin-right: 10px;
   fill: var(--primery-color);
 
-  transition: fill var(--time-action) var(--time-distribution-function);
+  transform: rotateX(0);
+
+  transition: fill var(--time-action) var(--time-distribution-function),
+    transform calc(var(--time-action) * 2) var(--time-distribution-function) var(--time-action);
 }
 
 .header-link .link:hover .address-icon,
 .header-link .link:focus .address-icon {
   fill: var(--accent-color);
+
+  transform: rotateX(1turn);
 }
