@@ -107,6 +107,7 @@
 }
 
 .header-nav .link:hover::after,
+.header-nav .link:focus::after,
 .header-nav .link.current::after {
   background-color: var(--accent-color);
 

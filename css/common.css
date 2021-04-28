@@ -230,7 +230,8 @@ img {
     transform calc(var(--time-action) * 2) var(--time-distribution-function);
 }
 
-.icon:hover .social-icons-svg {
+.icon:hover .social-icons-svg,
+.icon:focus .social-icons-svg {
   fill: var(--secondary-color);
 
   transform: scale(1.3);
