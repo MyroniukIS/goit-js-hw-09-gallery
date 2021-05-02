@@ -97,7 +97,7 @@
   height: 4px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: inherit;
+  background-color: var(--accent-color);
   border-radius: 4px;
   margin-top: 28px;
 
@@ -109,8 +109,6 @@
 .header-nav .link:hover::after,
 .header-nav .link:focus::after,
 .header-nav .link.current::after {
-  background-color: var(--accent-color);
-
   transform: scaleX(1);
 }
 
