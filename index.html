@@ -57,7 +57,7 @@
     </header>
 
     <main>
-      <!-- Section Hero -->
+      <!-- Section HERO -->
       <section class="section hero">
         <div class="section-title-box">
           <h1 class="section-title">Эффективные решения для вашего бизнеса</h1>
@@ -68,21 +68,58 @@
         <div class="backdrop is-hidden" data-backdrop>
           <div class="modal">
             <button type="button" class="button-modal" data-close-modal>
-              <svg width="11px" height="11px">
+              <svg width="10px" height="10px">
                 <use href="./images/icons.svg#icon-close" aria-label="Закрыть"></use>
               </svg>
             </button>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quis debitis quibusdam doloremque
-              perspiciatis distinctio consequuntur nobis ipsa dolore earum quisquam qui eveniet maxime ad, numquam
-              libero quos, veritatis accusantium similique tempora nemo? Quo consequuntur iusto eius aut facilis
-              doloribus aliquam quae vitae dolor voluptatibus? Accusamus corrupti cumque odio illo.
-            </p>
+            <form>
+              <h4 class="form-appeal">Оставьте свои данные, мы вам перезвоним</h4>
+
+              <div role="group" arial-labelby="contact-details-head" class="fieldset">
+                <div class="form-field">
+                  <label for="user-name">Имя</label>
+                  <input type="text" name="user-name" id="user-name" placeholder="Иванов Иван Иванович" autofocus />
+                  <svg width="12" height="12">
+                    <use href="./images/icons.svg#icon-name"></use>
+                  </svg>
+                </div>
+
+                <div class="form-field">
+                  <label for="tel">Телефон</label>
+                  <input type="tel" name="tel" id="tel" placeholder="+380 98 765 43 21" />
+                  <svg width="13" height="13">
+                    <use href="./images/icons.svg#icon-tel"></use>
+                  </svg>
+                </div>
+
+                <div class="form-field">
+                  <label for="e-mail">Почта</label>
+                  <input type="email" name="e-mail" id="e-mail" placeholder="my@mail.com" />
+                  <svg width="15" height="12">
+                    <use href="./images/icons.svg#icon-e-mail"></use>
+                  </svg>
+                </div>
+
+                <div class="form-field">
+                  <label for="comment">Комментарий</label>
+                  <textarea class="comment" name="comment" id="comment" rows="5" placeholder="Введите текст"></textarea>
+                </div>
+              </div>
+
+              <div class="form-policy">
+                <input type="checkbox" name="policy" id="policy" />
+                <label for="policy"
+                  >Соглашаюсь с рассылкой и принимаю <a href="" class="form-link">Условия договора</a></label
+                >
+              </div>
+
+              <button type="submit" class="button primery">Отправить</button>
+            </form>
           </div>
         </div>
       </section>
 
-      <!-- Section Features  -->
+      <!-- Section FEATURES  -->
       <section class="section features">
         <div class="container">
           <h2 class="section-title visually-hidden">Особенности</h2>
@@ -117,7 +154,7 @@
         </div>
       </section>
 
-      <!-- Section Activities -->
+      <!-- Section ACTIVITIES -->
       <section class="section">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
@@ -147,7 +184,7 @@
         </div>
       </section>
 
-      <!-- Section Team -->
+      <!-- Section TEAM -->
       <section class="section team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -336,7 +373,7 @@
         </div>
       </section>
 
-      <!-- Section Clients -->
+      <!-- Section CLIENTS -->
       <section class="section">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
@@ -416,10 +453,10 @@
           </address>
         </div>
 
-        <div class="call">
-          <h3 class="visually-hidden">Призыв</h3>
+        <div class="appeal-social">
+          <h3 class="visually-hidden">Призыв добавиться в соцсети</h3>
 
-          <p class="call-paragraph">Присоединяйтесь</p>
+          <p class="footer-appeal">Присоединяйтесь</p>
 
           <ul class="list-social list">
             <li class="link-social">
@@ -454,6 +491,22 @@
               </a>
             </li>
           </ul>
+        </div>
+
+        <div class="appeal-subscription">
+          <h3 class="visually-hidden">Призыв подписаться на рассылку</h3>
+
+          <p class="footer-appeal">Подпишитесь на рассылку</p>
+
+          <form class="form-subscription">
+            <input type="email" name="e-mail" placeholder="E-mail" autocomplete="off" />
+            <button type="submit" class="button primery">
+              Подписаться
+              <svg>
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
