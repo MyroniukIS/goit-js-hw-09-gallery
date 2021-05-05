@@ -68,7 +68,7 @@
         <div class="backdrop is-hidden" data-backdrop>
           <div class="modal">
             <button type="button" class="button-modal" data-close-modal>
-              <svg width="10px" height="10px">
+              <svg width="11px" height="11px">
                 <use href="./images/icons.svg#icon-close" aria-label="Закрыть"></use>
               </svg>
             </button>
@@ -106,12 +106,13 @@
                 </div>
               </div>
 
-              <div class="form-policy">
-                <input type="checkbox" name="policy" id="policy" />
-                <label for="policy"
-                  >Соглашаюсь с рассылкой и принимаю <a href="" class="form-link">Условия договора</a></label
+              <label class="form-policy">
+                <input class="checkbox" type="checkbox" name="policy" />
+                <span class="icon"></span>
+                <span class="label"
+                  >Соглашаюсь с рассылкой и принимаю <a href="" class="form-link">Условия договора</a></span
                 >
-              </div>
+              </label>
 
               <button type="submit" class="button primery">Отправить</button>
             </form>
