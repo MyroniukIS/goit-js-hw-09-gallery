@@ -582,6 +582,10 @@ textarea {
   background-origin: border-box;
 }
 
+.form-policy:focus-within > .icon {
+  border-color: var(--accent-color);
+}
+
 .form-link {
   color: var(--accent-color);
 }
