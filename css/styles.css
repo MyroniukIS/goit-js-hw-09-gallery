@@ -515,6 +515,10 @@ textarea {
   padding-left: 42px;
 }
 
+.form-field textarea {
+  height: 120px;
+}
+
 .form-field input:hover,
 .form-field input:focus,
 .form-field textarea:hover,
