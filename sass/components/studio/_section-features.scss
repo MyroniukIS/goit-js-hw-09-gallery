@@ -1,0 +1,61 @@
+.features {
+  @extend %section;
+  padding-bottom: 0;
+}
+
+.features__list {
+  @extend %list;
+  margin-top: calc(-1 * (var(--gallery-gap)));
+  margin-left: calc(-1 * (var(--gallery-gap)));
+}
+
+.features__item {
+  flex-basis: calc(100% / 4 - var(--gallery-gap));
+  margin-top: var(--gallery-gap);
+  margin-left: var(--gallery-gap);
+
+  &::before {
+    content: '';
+    display: block;
+    height: 120px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--third-background-color);
+    border-radius: 4px;
+  }
+  
+  // &--icon-antenna::before {
+  //   background-image: url(../images/features/antenna.svg);
+  // }
+  
+  // &--icon-clock::before {
+  //   background-image: url(../images/features/clock.svg);
+  // }
+  
+  // &--icon-diagram::before {
+  //   background-image: url(../images/features/diagram.svg);
+  // }
+  
+  // &--icon-astronaut::before {
+  //   background-image: url(../images/features/astronaut.svg);
+  // }
+}
+
+@include generateIcons($iconsFeatures);
+
+.features__title {
+  margin-bottom: 10px;
+
+  color: var(--title-color);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.features__text {
+  text-align: left;
+}

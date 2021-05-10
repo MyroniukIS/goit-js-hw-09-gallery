@@ -1,0 +1,71 @@
+.button-primery {
+  @extend %button;
+  min-width: 200px;
+  height: 50px;
+  padding: 10px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  &--change:hover,
+  &--change:focus {
+    background-color: var(--third-background-color);
+    color: var(--title-color);
+  }
+}
+
+.button-secondary {
+  @extend %button;
+  box-shadow: 0;
+
+  padding: 6px 22px;
+
+  background-color: var(--third-background-color);
+  color: var(--title-color);
+
+  font-weight: 500;
+  line-height: 1.62;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+  }
+}
+
+.button-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  width: 31px;
+  height: 31px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  background-color: var(--primery-background-color);
+
+  cursor: pointer;
+
+  transform: rotateZ(0);
+
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function),
+    fill var(--time-action) var(--time-distribution-function);
+
+  &:hover,
+  &:focus {
+    transform: rotateZ(1turn);
+  
+    fill: var(--accent-color);
+  }
+}

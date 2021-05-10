@@ -1,0 +1,51 @@
+.logo {
+  @extend %link;
+  color: var(--accent-color);
+
+  font-family: var(--title-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+
+  transition: color var(--time-action) var(--time-distribution-function), text-shadow var(--time-action) var(--time-distribution-function) var(--time-action);
+
+  &:hover,
+  &:focus {
+    text-shadow: 2px 2px 4px var(--accent-color);
+  }
+}
+
+.header__logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+
+  &:hover,
+  &:focus {
+    color: #000000;
+  }
+}
+
+.footer__logo {
+  &:hover,
+  &:focus {
+    color: var(--secondary-color);
+  }
+}
+
+.header__half {
+  color: #000000;
+}
+
+.footer__half {
+  color: var(--secondary-color);
+}
+
+.logo__half {
+  transition: color var(--time-action) var(--time-distribution-function);
+  
+  .logo:hover &,
+  .logo:focus & {
+    color: var(--accent-color);
+  }
+}
