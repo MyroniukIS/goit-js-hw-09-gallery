@@ -1,9 +1,5 @@
 .activities {
   @extend %section;
-
-  @media screen and (max-width: 1199px) {
-    display: none;
-  }
 }
 
 .activities__list {
@@ -19,8 +15,6 @@
 }
 
 .activities__thumb {
-  display: inline-block;
-  text-align: center;
   position: relative;
 
   &::before {

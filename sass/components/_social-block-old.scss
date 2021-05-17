@@ -9,10 +9,6 @@
   @extend %list;
   display: flex;
   flex-direction: row;
-
-  &--center {
-    justify-content: center;
-  }
 }
 
 .social-networks__item:not(:nth-last-of-type(1)) {
@@ -46,6 +42,7 @@
 }
 
 .social-networks__svg {
+  display: flex;
   width: 20px;
   height: 20px;
 

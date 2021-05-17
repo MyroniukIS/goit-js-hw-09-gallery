@@ -10,16 +10,9 @@
 }
 
 .features__item {
+  flex-basis: calc(100% / 4 - var(--gallery-gap));
   margin-top: var(--gallery-gap);
   margin-left: var(--gallery-gap);
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc(100% / 2 - var(--gallery-gap));
-  }
-
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 4 - var(--gallery-gap));
-  }
 
   &::before {
     content: '';
@@ -31,6 +24,22 @@
     background-color: var(--third-background-color);
     border-radius: 4px;
   }
+  
+  // &--icon-antenna::before {
+  //   background-image: url(../images/features/antenna.svg);
+  // }
+  
+  // &--icon-clock::before {
+  //   background-image: url(../images/features/clock.svg);
+  // }
+  
+  // &--icon-diagram::before {
+  //   background-image: url(../images/features/diagram.svg);
+  // }
+  
+  // &--icon-astronaut::before {
+  //   background-image: url(../images/features/astronaut.svg);
+  // }
 }
 
 @include generateIcons($iconsFeatures);
