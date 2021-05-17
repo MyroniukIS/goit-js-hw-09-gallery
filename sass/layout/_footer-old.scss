@@ -71,12 +71,9 @@
 }
 
 .subscription__form {
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: space-between;
 }
-  
 
 .subscription__input {
   width: 358px;
