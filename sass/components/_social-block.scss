@@ -8,10 +8,13 @@
 .social-networks__list {
   @extend %list;
   display: flex;
+  justify-content: center;
   flex-direction: row;
 
-  &--center {
-    justify-content: center;
+  &--left {
+    @media screen and (min-width: 1200px) {
+      justify-content: flex-start;
+    }
   }
 }
 

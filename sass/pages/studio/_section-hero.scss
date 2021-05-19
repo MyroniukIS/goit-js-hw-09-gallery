@@ -26,6 +26,10 @@
   margin-bottom: var(--gallery-gap);
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 1200px) {
+    width: 696px;
+  }
 }
 
 .hero__title {

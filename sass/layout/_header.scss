@@ -13,11 +13,15 @@
   letter-spacing: 0.02em;
 }
 
-.header--flexbox {
+.header__mobile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-container {
@@ -40,6 +44,12 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+  }
+}
+
+.header__station {
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
 
@@ -137,4 +147,3 @@
     transform: rotateX(1turn);
   }
 }
-

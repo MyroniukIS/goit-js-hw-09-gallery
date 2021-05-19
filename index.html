@@ -24,7 +24,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="u-container header--flexbox">
+      <div class="header__mobile u-container">
         <a href="./index.html" lang="en" class="logo header__logo">
           Web<span class="logo__half header__half">Studio</span>
         </a>
@@ -73,6 +73,43 @@
             </li>
           </ul>
         </div>
+      </div>
+
+      <div class="header__station u-container u-flexbox">
+        <nav class="header__nav u-flexbox">
+          <a href="./index.html" lang="en" class="logo header__logo">
+            Web<span class="logo__half header__half">Studio</span>
+          </a>
+
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="./index.html" class="header__link header__link--nav header__link--current">Студия</a>
+            </li>
+            <li class="header__item">
+              <a href="./portfolio.html" class="header__link header__link--nav">Портфолио</a>
+            </li>
+            <li class="header__item"><a href="#contacts" class="header__link header__link--nav">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <ul class="header__address">
+          <li class="header__item">
+            <a href="mailto:info@devstudio.com" class="header__link header__link--address">
+              <svg class="header__icon">
+                <use href="./images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com
+            </a>
+          </li>
+          <li class="header__item">
+            <a href="tel:+380961111111" class="header__link header__link--address">
+              <svg class="header__icon">
+                <use href="./images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +38 096 111 11 11
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
 
@@ -233,7 +270,7 @@
                 </div>
 
                 <div class="social-networks">
-                  <ul class="social-networks__list social-networks__list--center">
+                  <ul class="social-networks__list">
                     <li class="social-networks__item">
                       <a
                         class="social-networks__link"
@@ -304,7 +341,7 @@
                 </div>
 
                 <div class="social-networks">
-                  <ul class="social-networks__list social-networks__list--center">
+                  <ul class="social-networks__list">
                     <li class="social-networks__item">
                       <a
                         class="social-networks__link"
@@ -375,7 +412,7 @@
                 </div>
 
                 <div class="social-networks">
-                  <ul class="social-networks__list social-networks__list--center">
+                  <ul class="social-networks__list">
                     <li class="social-networks__item">
                       <a
                         class="social-networks__link"
@@ -446,7 +483,7 @@
                 </div>
 
                 <div class="social-networks">
-                  <ul class="social-networks__list social-networks__list--center">
+                  <ul class="social-networks__list">
                     <li class="social-networks__item">
                       <a
                         class="social-networks__link"
@@ -603,7 +640,7 @@
 
           <p class="footer__appeal">Присоединяйтесь</p>
 
-          <ul class="social-networks__list">
+          <ul class="social-networks__list social-networks__list--left">
             <li class="social-networks__item">
               <a
                 class="social-networks__link social-networks__link--footer"
