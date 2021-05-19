@@ -40,7 +40,49 @@
   }
 }
 
-.button-modal {
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.icon-close-menu {
+  fill: var(--title-color);
+
+  .menu-button & {
+    display: none;
+  }
+  
+  .menu-button.is-open & {
+    display: block;
+  }
+
+  .menu-button:hover &, 
+  .menu-button:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.icon-menu {
+  fill: var(--title-color);
+
+  .menu-button:hover &, 
+  .menu-button:focus & {
+    fill: var(--accent-color);
+  }
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.modal-button {
   position: absolute;
   top: 8px;
   right: 8px;

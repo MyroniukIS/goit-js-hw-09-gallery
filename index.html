@@ -24,41 +24,55 @@
   </head>
   <body>
     <header class="header">
-      <div class="u-container u-flexbox">
-        <nav class="header__nav u-flexbox">
-          <a href="./index.html" lang="en" class="logo header__logo">
-            Web<span class="logo__half header__half">Studio</span>
-          </a>
+      <div class="u-container header--flexbox">
+        <a href="./index.html" lang="en" class="logo header__logo">
+          Web<span class="logo__half header__half">Studio</span>
+        </a>
 
-          <ul class="header__list">
+        <button 
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button>
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+            <use class="icon-close-menu" href="./images/icons.svg#icon-close-menu"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" id="menu-container" data-menu>
+          <nav class="header__nav u-flexbox">
+            <ul class="header__list">
+              <li class="header__item">
+                <a href="./index.html" class="header__link header__link--nav header__link--current">Студия</a>
+              </li>
+              <li class="header__item">
+                <a href="./portfolio.html" class="header__link header__link--nav">Портфолио</a>
+              </li>
+              <li class="header__item"><a href="#contacts" class="header__link header__link--nav">Контакты</a></li>
+            </ul>
+          </nav>
+  
+          <ul class="header__address">
             <li class="header__item">
-              <a href="./index.html" class="header__link header__link--nav header__link--current">Студия</a>
+              <a href="mailto:info@devstudio.com" class="header__link header__link--address">
+                <svg class="header__icon">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
             </li>
             <li class="header__item">
-              <a href="./portfolio.html" class="header__link header__link--nav">Портфолио</a>
+              <a href="tel:+380961111111" class="header__link header__link--address">
+                <svg class="header__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
             </li>
-            <li class="header__item"><a href="#contacts" class="header__link header__link--nav">Контакты</a></li>
           </ul>
-        </nav>
-
-        <ul class="header__address">
-          <li class="header__item">
-            <a href="mailto:info@devstudio.com" class="header__link header__link--address">
-              <svg class="header__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header__item">
-            <a href="tel:+380961111111" class="header__link header__link--address">
-              <svg class="header__icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        </div>
       </div>
     </header>
 
@@ -73,7 +87,7 @@
         <!-- Modal window -->
         <div class="backdrop backdrop--is-hidden" data-backdrop>
           <div class="modal">
-            <button type="button" class="button-modal" data-close-modal>
+            <button type="button" class="modal-button" data-close-modal>
               <svg width="11px" height="11px">
                 <use href="./images/icons.svg#icon-close" aria-label="Закрыть"></use>
               </svg>
@@ -666,6 +680,7 @@
       </div>
     </footer>
 
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
