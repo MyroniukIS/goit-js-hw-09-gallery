@@ -41,6 +41,10 @@
 }
 
 .menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 3;
   display: inline-flex;
   margin: 0;
   padding: 0;
@@ -53,8 +57,35 @@
   }
 }
 
-.icon-close-menu {
+.menu-button__icon-menu {
   fill: var(--title-color);
+
+  transform: rotateX(0);
+  transform-origin: center center;
+
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function),
+    fill var(--time-action) var(--time-distribution-function);
+
+  .menu-button.is-open & {
+    display: none;
+  }
+
+  .menu-button:hover &, 
+  .menu-button:focus & {
+    fill: var(--accent-color);
+
+    transform: rotateX(1turn);
+  }
+}
+
+.menu-button__icon-close-menu {
+  fill: var(--title-color);
+
+  transform: rotateZ(0);
+  transform-origin: center center;
+
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function),
+    fill var(--time-action) var(--time-distribution-function);
 
   .menu-button & {
     display: none;
@@ -63,24 +94,13 @@
   .menu-button.is-open & {
     display: block;
   }
-
+  
   .menu-button:hover &, 
   .menu-button:focus & {
     fill: var(--accent-color);
+
+    transform: rotateZ(1turn);
   }
-}
-
-.icon-menu {
-  fill: var(--title-color);
-
-  .menu-button:hover &, 
-  .menu-button:focus & {
-    fill: var(--accent-color);
-  }
-}
-
-.menu-button.is-open .icon-menu {
-  display: none;
 }
 
 .modal-button {
@@ -107,8 +127,8 @@
 
   &:hover,
   &:focus {
-    transform: rotateZ(1turn);
-  
     fill: var(--accent-color);
+
+    transform: rotateZ(1turn);
   }
 }
