@@ -389,7 +389,7 @@ textarea {
   line-height: 1.17;
 }
 
-.header__list, .header-address, .header-social, .contacts__list, .features__list, .activities__list, .team__list, .clients__list, .social-networks__list, .filter, .gallery {
+.header-nav__list, .header-address, .header-social, .contacts__list, .features__list, .activities__list, .team__list, .clients__list, .social-networks__list, .filter, .gallery {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -449,21 +449,6 @@ textarea {
 @media screen and (min-width: 768px) {
   .header {
     height: var(--header-height);
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: 88px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header__list {
-    margin-left: 93px;
   }
 }
 
@@ -528,6 +513,21 @@ textarea {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .header-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 88px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-nav__list {
+    margin-left: 93px;
+  }
+}
+
 .header-nav__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -576,6 +576,10 @@ textarea {
     transition: transform var(--time-action) var(--time-distribution-function);
     transition: transform var(--time-action) var(--time-distribution-function), -webkit-transform var(--time-action) var(--time-distribution-function);
   }
+  .header-nav__link:hover::after, .header-nav__link:focus::after, .header-nav__link--current::after {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -583,13 +587,6 @@ textarea {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header-nav__link:hover::after, .header-nav__link:focus::after, .header-nav__link--current::after {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
   }
 }
 
@@ -646,6 +643,7 @@ textarea {
 @media screen and (min-width: 1200px) {
   .header-address__item:not(:last-child) {
     margin-right: 50px;
+    margin-bottom: inherit;
   }
 }
 
