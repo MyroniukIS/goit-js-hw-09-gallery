@@ -735,7 +735,7 @@ textarea {
   background: var(--secondary-background-color);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1200px) {
   .footer {
     text-align: center;
   }
@@ -762,7 +762,7 @@ textarea {
   width: 270px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .contacts {
     margin-left: auto;
     margin-right: auto;
@@ -834,7 +834,15 @@ textarea {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .subscription__form {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .subscription__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -848,7 +856,6 @@ textarea {
 .subscription__input {
   width: 100%;
   height: 50px;
-  margin-right: 12px;
   margin-bottom: 20px;
   padding: 15px;
   background-color: var(--secondary-background-color);
@@ -882,6 +889,12 @@ textarea {
 
 .subscription__input::placeholder {
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 1200px) {
+  .subscription__input {
+    margin-right: 12px;
+  }
 }
 
 .subscription__svg {
