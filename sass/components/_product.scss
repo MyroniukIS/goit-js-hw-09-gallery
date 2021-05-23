@@ -1,6 +1,11 @@
+.product {
+  height: 100%;
+}
+
 .product__link {
   @extend %link;
   display: block;
+  height: 100%;
   border: 1px solid #eeeeee;
 
   box-shadow: 0;

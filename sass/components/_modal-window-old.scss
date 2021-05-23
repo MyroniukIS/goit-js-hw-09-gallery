@@ -15,45 +15,28 @@
     opacity: 0;
     pointer-events: none;
   }
-
-  @media screen and (max-width: 767px) {
-    overflow-y: scroll;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  body.modal-open {
-    overflow: hidden;
-  }
 }
 
 .modal {
-  position: relative;
-  width: calc(100% - 30px);
-  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  max-width: 528px;
+  min-height: 581px;
   padding: 40px;
-  margin: 15px auto auto auto;
 
   background-color: var(--primery-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  transform: translate(-50%, -50%) scale(1);
 
-    transform: translate(-50%, -50%) scale(1);
+  transition: transform calc(var(--time-action) * 2) var(--time-distribution-function);
 
-    transition: transform calc(var(--time-action) * 2) var(--time-distribution-function);
-
-    .backdrop--is-hidden & {
-      transform: translate(-50%, -50%) scale(0.9);
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    max-width: 528px;
+  .backdrop--is-hidden & {
+    transform: translate(-50%, -50%) scale(0.9);
   }
 }
 
@@ -63,11 +46,7 @@
   color: var(--title-color);
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.5;
-
-  @media screen and (min-width: 1200px) {
-    line-height: 1.15;
-  }
+  line-height: 1.15;
 }
 
 .modal-form__fieldset {
@@ -92,8 +71,8 @@
 
 .form-field__input {
   margin: 0;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 42px;
   padding-right: 16px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -142,13 +121,8 @@
   align-items: center;
   margin-bottom: 30px;
 
-  font-size: 12px;
-  line-height: 1.17;
-
-  @media screen and (min-width: 1200px) {
-    font-size: 14px;
-    line-height: 1.71;
-  }
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .form-policy__checkbox {
