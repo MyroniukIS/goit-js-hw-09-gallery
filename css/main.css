@@ -453,6 +453,7 @@ textarea {
 }
 
 .mobile-header {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
