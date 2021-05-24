@@ -911,16 +911,30 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   background: var(--secondary-background-color);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/overlay.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/overlay.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/mobile/hero/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero/hero.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/mobile/hero/hero@2x.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
     max-width: 768px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/tablet/hero/hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero/hero.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/tablet/hero/hero@2x.jpg);
   }
 }
 
@@ -930,6 +944,14 @@ textarea {
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/desktop/hero/hero.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero/hero.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: url(../images/desktop/hero/hero@2x.jpg);
   }
 }
 
@@ -1010,19 +1032,19 @@ textarea {
 }
 
 .features__item--icon-antenna::before {
-  background-image: url(../images/features/antenna.svg);
+  background-image: url(../images/icons/antenna.svg);
 }
 
 .features__item--icon-clock::before {
-  background-image: url(../images/features/clock.svg);
+  background-image: url(../images/icons/clock.svg);
 }
 
 .features__item--icon-diagram::before {
-  background-image: url(../images/features/diagram.svg);
+  background-image: url(../images/icons/diagram.svg);
 }
 
 .features__item--icon-astronaut::before {
-  background-image: url(../images/features/astronaut.svg);
+  background-image: url(../images/icons/astronaut.svg);
 }
 
 .features__title {
@@ -1704,7 +1726,7 @@ textarea {
 
 .form-policy__checkbox:checked + .form-policy__icon {
   border-color: transparent;
-  background-image: url("../images/hero/full-check.svg");
+  background-image: url("../images/icons/full-check.svg");
   background-size: contain;
   background-origin: border-box;
 }
