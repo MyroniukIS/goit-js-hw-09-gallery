@@ -531,12 +531,12 @@ textarea {
   }
 }
 
-.header-nav__item:not(:last-child) {
+.header-nav__item {
   margin-bottom: 32px;
 }
 
 @media screen and (min-width: 768px) {
-  .header-nav__item:not(:last-child) {
+  .header-nav__item {
     margin-right: 50px;
     margin-bottom: 0;
   }
