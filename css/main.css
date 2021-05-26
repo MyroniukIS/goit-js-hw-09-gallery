@@ -382,11 +382,19 @@ textarea {
 }
 
 .u-section-title {
-  margin-bottom: 50px;
+  padding-bottom: 30px;
   color: var(--title-color);
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
+}
+
+@media screen and (min-width: 1200px) {
+  .u-section-title {
+    padding-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 
 .header-nav__list, .header-address, .header-social, .contacts__list, .features__list, .activities__list, .team__list, .clients__list, .social-networks__list, .filter, .gallery {
@@ -997,8 +1005,10 @@ textarea {
   }
 }
 
-.features {
-  padding-bottom: 0;
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-bottom: 0;
+  }
 }
 
 .features__list {
@@ -1061,7 +1071,12 @@ textarea {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .features__title {
+    text-align: left;
+  }
 }
 
 .features__text {

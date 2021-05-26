@@ -1,6 +1,9 @@
 .features {
   @extend %section;
-  padding-bottom: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 0;
+  }
 }
 
 .features__list {
@@ -45,7 +48,10 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  text-align: left;
+
+  @media screen and (min-width: 768px) {
+    text-align: left;  
+  }
 }
 
 .features__text {
