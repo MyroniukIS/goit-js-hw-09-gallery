@@ -31,6 +31,13 @@ const createBoxes = amount => {
 renderBtn.addEventListener('click', () => createBoxes(controlsBlock.valueAsNumber))
 
 // - Создаём функцию `destroyBoxes()`, которая очищает `div#boxes`
-const destroyBoxes = () => (controlsBlock.value = '')
+const destroyBoxes = () => {
+  const boxes = collectionСontainer.querySelectorAll('#boxes div')
+
+  for (let i = 0; i < controlsBlock.valueAsNumber; i += 1) {
+    collectionСontainer.removeChild(boxes[i])
+  }
+  controlsBlock.value = ''
+}
 
 destroyBtn.addEventListener('click', destroyBoxes)
