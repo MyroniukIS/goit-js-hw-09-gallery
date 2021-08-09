@@ -18,11 +18,26 @@ const gallery = document.querySelector('#gallery')
 gallery.style.display = 'flex'
 gallery.style.padding = '0px'
 
-images.forEach(img =>
-  gallery.insertAdjacentHTML(
-    'beforeend',
-    `<li style="display:flex; width:0,33vw; height:0,33vh; margin: 10px;">
-      <img src='${img.url}' alt='${img.alt}' style='display: block; height: 100%; width: 100%; object-fit:cover'>
-    </li>`,
-  ),
+gallery.insertAdjacentHTML(
+  'afterbegin',
+  `<li style="display:flex; width:0,33vw; height:0,33vh; margin: 10px;">
+    <img src='${images[0].url}' alt='${images[0].alt}' style='display: block; height: 100%; width: 100%; object-fit:cover'>
+  </li>
+  <li style="display:flex; width:0,33vw; height:0,33vh; margin: 10px;">
+    <img src='${images[1].url}' alt='${images[1].alt}' style='display: block; height: 100%; width: 100%; object-fit:cover'>
+  </li>
+  <li style="display:flex; width:0,33vw; height:0,33vh; margin: 10px;">
+    <img src='${images[2].url}' alt='${images[2].alt}' style='display: block; height: 100%; width: 100%; object-fit:cover'>
+  </li>`,
 )
+
+// ------- Альтернативный вариант -------
+
+// images.forEach(img =>
+//   gallery.insertAdjacentHTML(
+//     'beforeend',
+//     `<li style="display:flex; width:0,33vw; height:0,33vh; margin: 10px;">
+//       <img src='${img.url}' alt='${img.alt}' style='display: block; height: 100%; width: 100%; object-fit:cover'>
+//     </li>`,
+//   ),
+// )
