@@ -73,4 +73,10 @@ const lightboxCloseOverlay = document.querySelector('.lightbox__overlay')
 lightboxCloseOverlay.addEventListener('click', toCloseLightbox)
 
 //- Закрытие модального окна по нажатию клавиши `ESC`.
+window.addEventListener('keydown', toCloseLightboxByKeyEscape)
+
+function toCloseLightboxByKeyEscape(event) {
+  event.code === 'Escape' ? toCloseLightbox() : null
+}
+
 //- Пролистывание изображений галереи в открытом модальном окне клавишами "влево" и "вправо".
