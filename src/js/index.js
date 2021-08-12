@@ -43,13 +43,22 @@ function getLargerImageLink(targetImage) {
 }
 
 //- Открытие модального окна по клику на элементе галереи.
-function toOpenLightbox() {
-  const lightbox = document.querySelector('.js-lightbox')
+const lightbox = document.querySelector('.js-lightbox')
 
+function toOpenLightbox() {
   lightbox.classList.add('is-open')
 }
 
 //- Подмена значения атрибута `src` элемента `img.lightbox__image`.
+
 //- Закрытие модального окна по клику на кнопку `button[data-action="close-lightbox"]`.
+const lightboxCloseBtn = document.querySelector('[data-action="close-lightbox"]')
+
+lightboxCloseBtn.addEventListener('click', toCloseLightbox)
+
+function toCloseLightbox() {
+  lightbox.classList.remove('is-open')
+}
+
 //- Очистка значения атрибута `src` элемента `img.lightbox__image`. Это необходимо для того, чтобы при следующем открытии
 //  модального окна, пока грузится изображение, мы не видели предыдущее.
