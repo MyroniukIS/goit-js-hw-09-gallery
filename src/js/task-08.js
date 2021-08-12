@@ -36,6 +36,7 @@ const destroyBoxes = () => {
 
   collectionСontainer.innerHTML = ''
   controlsBlock.value = ''
+  counter = 30
 }
 
 destroyBtn.addEventListener('click', destroyBoxes)
