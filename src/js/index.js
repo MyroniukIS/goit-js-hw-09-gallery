@@ -40,6 +40,10 @@ const lightbox = document.querySelector('.js-lightbox')
 
 function toOpenLightbox() {
   lightbox.classList.add('is-open')
+
+  lightboxCloseBtn.addEventListener('click', toCloseLightbox)
+  lightboxCloseOverlay.addEventListener('click', toCloseLightbox)
+  window.addEventListener('keydown', toCloseLightboxByKey)
 }
 
 //- Подмена значения атрибута `src` элемента `img.lightbox__image`.
@@ -53,11 +57,13 @@ function getLargerImageLink(targetImage) {
 //- Закрытие модального окна по клику на кнопку `button[data-action="close-lightbox"]`.
 const lightboxCloseBtn = document.querySelector('[data-action="close-lightbox"]')
 
-lightboxCloseBtn.addEventListener('click', toCloseLightbox)
-
 function toCloseLightbox() {
   lightbox.classList.remove('is-open')
   resetLargerImageLink()
+
+  lightboxCloseBtn.removeEventListener('click', toCloseLightbox)
+  lightboxCloseOverlay.removeEventListener('click', toCloseLightbox)
+  window.removeEventListener('keydown', toCloseLightboxByKey)
 }
 
 //- Очистка значения атрибута `src` элемента `img.lightbox__image`. Это необходимо для того, чтобы при следующем открытии
@@ -70,13 +76,30 @@ function resetLargerImageLink() {
 //- Закрытие модального окна по клику на `div.lightbox__overlay`.
 const lightboxCloseOverlay = document.querySelector('.lightbox__overlay')
 
-lightboxCloseOverlay.addEventListener('click', toCloseLightbox)
-
 //- Закрытие модального окна по нажатию клавиши `ESC`.
-window.addEventListener('keydown', toCloseLightboxByKeyEscape)
-
-function toCloseLightboxByKeyEscape(event) {
+function toCloseLightboxByKey(event) {
   event.code === 'Escape' ? toCloseLightbox() : null
+  event.code === 'ArrowLeft' ? toSlideLeft() : null
+  event.code === 'ArrowRight' ? toSlideRight() : null
 }
 
 //- Пролистывание изображений галереи в открытом модальном окне клавишами "влево" и "вправо".
+const lengthArray = galleryItems.length
+
+function toSlideLeft() {
+  for (let i = 0; i < lengthArray; i += 1) {
+    currentLargeImage.getAttribute('src') === galleryItems[i].original
+      ? currentLargeImage.setAttribute('src', galleryItems[i - 1].original) &&
+        currentLargeImage.setAttribute('alt', galleryItems[i - 1].description)
+      : null
+  }
+}
+
+function toSlideRight() {
+  for (let i = 0; i < lengthArray; i += 1) {
+    currentLargeImage.getAttribute('src') === galleryItems[i].original
+      ? currentLargeImage.setAttribute('src', galleryItems[i + 1].original) &&
+        currentLargeImage.setAttribute('alt', galleryItems[i + 1].description)
+      : null
+  }
+}
