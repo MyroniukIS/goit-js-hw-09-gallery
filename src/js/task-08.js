@@ -10,9 +10,9 @@ const collectionСontainer = document.querySelector('#boxes')
 // - Имеет случайный rgb цвет фона
 // - Размеры самого первого div - 30px на 30px
 // - Каждый следующий div после первого, должен быть шире и выше предыдущего на 10px
-const createBoxes = amount => {
-  let counter = 30
+let counter = 30
 
+const createBoxes = amount => {
   for (let i = 0; i < amount; i += 1) {
     const box = document.createElement('div')
     box.style.margin = '5px'
@@ -34,9 +34,7 @@ renderBtn.addEventListener('click', () => createBoxes(controlsBlock.valueAsNumbe
 const destroyBoxes = () => {
   const boxes = collectionСontainer.querySelectorAll('#boxes div')
 
-  for (let i = 0; i < controlsBlock.valueAsNumber; i += 1) {
-    collectionСontainer.removeChild(boxes[i])
-  }
+  collectionСontainer.innerHTML = ''
   controlsBlock.value = ''
 }
 
