@@ -14,7 +14,6 @@ gallery.insertAdjacentHTML(
               class="gallery__image"
               src="${image.preview}"
               data-source="${image.original}"
-              data-index="${idx}"
               alt="${image.description}"
             />
           </a>`,
@@ -44,7 +43,7 @@ function toOpenLightbox() {
 
   lightboxCloseBtn.addEventListener('click', toCloseLightbox)
   lightboxCloseOverlay.addEventListener('click', toCloseLightbox)
-  window.addEventListener('keydown', toCloseLightboxByKey)
+  window.addEventListener('keydown', lightboxByKey)
 }
 
 //- Подмена значения атрибута `src` элемента `img.lightbox__image`.
@@ -52,7 +51,6 @@ const currentLargeImage = document.querySelector('.lightbox__image')
 
 function getLargerImageLink(targetImage) {
   currentLargeImage.setAttribute('src', targetImage.dataset.source)
-  currentLargeImage.setAttribute('data-index', targetImage.dataset.index)
   currentLargeImage.setAttribute('alt', targetImage.alt)
 }
 
@@ -65,14 +63,13 @@ function toCloseLightbox() {
 
   lightboxCloseBtn.removeEventListener('click', toCloseLightbox)
   lightboxCloseOverlay.removeEventListener('click', toCloseLightbox)
-  window.removeEventListener('keydown', toCloseLightboxByKey)
+  window.removeEventListener('keydown', lightboxByKey)
 }
 
 //- Очистка значения атрибута `src` элемента `img.lightbox__image`. Это необходимо для того, чтобы при следующем открытии
 //  модального окна, пока грузится изображение, мы не видели предыдущее.
 function resetLargerImageLink() {
   currentLargeImage.setAttribute('src', '')
-  currentLargeImage.setAttribute('data-index', '')
   currentLargeImage.setAttribute('alt', '')
 }
 
@@ -80,10 +77,16 @@ function resetLargerImageLink() {
 const lightboxCloseOverlay = document.querySelector('.lightbox__overlay')
 
 //- Закрытие модального окна по нажатию клавиши `ESC`.
-function toCloseLightboxByKey(event) {
-  event.code === 'Escape' ? toCloseLightbox() : null
-  event.code === 'ArrowLeft' ? toSlideLeft() : null
-  event.code === 'ArrowRight' ? toSlideRight() : null
+function lightboxByKey(event) {
+  if (event.code === 'Escape') {
+    toCloseLightbox()
+  }
+  if (event.code === 'ArrowLeft') {
+    toSlideLeft()
+  }
+  if (event.code === 'ArrowRight') {
+    toSlideRight()
+  }
 }
 
 //- Пролистывание изображений галереи в открытом модальном окне клавишами "влево" и "вправо".
@@ -92,8 +95,9 @@ const lengthArray = galleryItems.length
 function toSlideLeft() {
   for (let i = 0; i < lengthArray; i += 1) {
     if (currentLargeImage.getAttribute('src') === galleryItems[i].original) {
-      currentLargeImage.setAttribute('src', galleryItems[i - 1].original)
       currentLargeImage.setAttribute('alt', galleryItems[i - 1].description)
+      currentLargeImage.setAttribute('src', galleryItems[i - 1].original)
+      return
     }
   }
 }
@@ -101,8 +105,9 @@ function toSlideLeft() {
 function toSlideRight() {
   for (let i = 0; i < lengthArray; i += 1) {
     if (currentLargeImage.getAttribute('src') === galleryItems[i].original) {
-      currentLargeImage.setAttribute('src', galleryItems[i + 1].original)
       currentLargeImage.setAttribute('alt', galleryItems[i + 1].description)
+      currentLargeImage.setAttribute('src', galleryItems[i + 1].original)
+      return
     }
   }
 }
