@@ -7,13 +7,14 @@ gallery.insertAdjacentHTML(
   'beforeend',
   galleryItems
     .map(
-      image =>
+      (image, idx) =>
         `<li class="gallery__item">
           <a class="gallery__link" href="${image.original}">
             <img
               class="gallery__image"
               src="${image.preview}"
               data-source="${image.original}"
+              data-index="${idx}"
               alt="${image.description}"
             />
           </a>`,
@@ -51,6 +52,7 @@ const currentLargeImage = document.querySelector('.lightbox__image')
 
 function getLargerImageLink(targetImage) {
   currentLargeImage.setAttribute('src', targetImage.dataset.source)
+  currentLargeImage.setAttribute('data-index', targetImage.dataset.index)
   currentLargeImage.setAttribute('alt', targetImage.alt)
 }
 
@@ -70,6 +72,7 @@ function toCloseLightbox() {
 //  модального окна, пока грузится изображение, мы не видели предыдущее.
 function resetLargerImageLink() {
   currentLargeImage.setAttribute('src', '')
+  currentLargeImage.setAttribute('data-index', '')
   currentLargeImage.setAttribute('alt', '')
 }
 
@@ -88,18 +91,18 @@ const lengthArray = galleryItems.length
 
 function toSlideLeft() {
   for (let i = 0; i < lengthArray; i += 1) {
-    currentLargeImage.getAttribute('src') === galleryItems[i].original
-      ? currentLargeImage.setAttribute('src', galleryItems[i - 1].original) &&
-        currentLargeImage.setAttribute('alt', galleryItems[i - 1].description)
-      : null
+    if (currentLargeImage.getAttribute('src') === galleryItems[i].original) {
+      currentLargeImage.setAttribute('src', galleryItems[i - 1].original)
+      currentLargeImage.setAttribute('alt', galleryItems[i - 1].description)
+    }
   }
 }
 
 function toSlideRight() {
   for (let i = 0; i < lengthArray; i += 1) {
-    currentLargeImage.getAttribute('src') === galleryItems[i].original
-      ? currentLargeImage.setAttribute('src', galleryItems[i + 1].original) &&
-        currentLargeImage.setAttribute('alt', galleryItems[i + 1].description)
-      : null
+    if (currentLargeImage.getAttribute('src') === galleryItems[i].original) {
+      currentLargeImage.setAttribute('src', galleryItems[i + 1].original)
+      currentLargeImage.setAttribute('alt', galleryItems[i + 1].description)
+    }
   }
 }
