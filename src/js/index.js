@@ -78,15 +78,9 @@ const lightboxCloseOverlay = document.querySelector('.lightbox__overlay')
 
 //- Закрытие модального окна по нажатию клавиши `ESC`.
 function lightboxByKey(event) {
-  if (event.code === 'Escape') {
-    toCloseLightbox()
-  }
-  if (event.code === 'ArrowLeft') {
-    toSlideLeft()
-  }
-  if (event.code === 'ArrowRight') {
-    toSlideRight()
-  }
+  event.code === 'Escape' ? toCloseLightbox() : null
+  event.code === 'ArrowLeft' ? toSlideLeft() : null
+  event.code === 'ArrowRight' ? toSlideRight() : null
 }
 
 //- Пролистывание изображений галереи в открытом модальном окне клавишами "влево" и "вправо".
