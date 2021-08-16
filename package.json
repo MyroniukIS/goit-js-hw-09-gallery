@@ -1,0 +1,27 @@
+{
+  "name": "goit-js-hw-09-gallery",
+  "version": "1.0.0",
+  "description": "**Читать на других языках: [Русский](README.md), [Українська](README.ua.md).**",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduard-Konovka/goit-js-hw-09-gallery.git"
+  },
+  "author": "Eduard Konovka <ed098ua@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduard-Konovka/goit-js-hw-09-gallery/issues"
+  },
+  "homepage": "https://github.com/Eduard-Konovka/goit-js-hw-09-gallery#readme",
+  "dependencies": {
+    "joi": "^17.4.2",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
