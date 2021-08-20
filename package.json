@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Eduard-Konovka/goit-js-hw-09-gallery.git"
+    "url": "git+https://github.com/MyroniukIS/goit-js-hw-09-gallery.git"
   },
-  "author": "Eduard Konovka <ed098ua@gmail.com>",
+  "author": "Myroniuk Ilona <knopkakyrs@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Eduard-Konovka/goit-js-hw-09-gallery/issues"
+    "url": "https://github.com/MyroniukIS/goit-js-hw-09-gallery/issues"
   },
-  "homepage": "https://github.com/Eduard-Konovka/goit-js-hw-09-gallery#readme",
+  "homepage": "https://github.com/MyroniukIS/goit-js-hw-09-gallery#readme",
   "dependencies": {
     "joi": "^17.4.2",
     "shortid": "^2.2.16"
