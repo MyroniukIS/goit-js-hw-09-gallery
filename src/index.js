@@ -2,9 +2,14 @@
 import { gallery } from './js/rendering-markup'
 
 //- Реализация делегирования на галерее `ul.js-gallery` и получение `url` большого изображения.
-import { handleNavClick } from './js/to-delegate'
+// import { handleNavClick } from './js/to-delegate'
 
 gallery.addEventListener('click', handleNavClick)
+
+
+
+
+
 
 
 // import galleryItems from './js/app.js';
