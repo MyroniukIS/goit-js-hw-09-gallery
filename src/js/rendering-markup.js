@@ -27,6 +27,6 @@ function createGalleryElements(galleryItems) {
     .join('');
   
 };   
+ console.log('розмітка є')  
   
-  
-// galleryUl.addEventListener('click', onGalerryContainerClick);
+

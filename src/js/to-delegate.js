@@ -1,14 +1,21 @@
-// import { toOpenLightbox } from './to-open-lightbox'
-// import { getLargerImageLink } from './current-large-image'
+import { toOpenLightbox } from './to-open-lightbox'
+
+const imgLightBox = document.querySelector('.lightbox__image')
 
 // //- Реализация делегирования на галерее `ul.js-gallery` и получение `url` большого изображения.
-// export function handleNavClick(event) {
-//   event.preventDefault()
+export function onGalerryContainerClick(evt) {
+  evt.preventDefault()
+  
+  if (evt.target.nodeName !== 'IMG') {
+    return;
+  }
 
-//   const target = event.target
-
-//   if (target.nodeName !== 'IMG') return
-
-//   toOpenLightbox()
-//   getLargerImageLink(target)
-// }
+  const elem = evt.target;
+  const srcElem = elem.dataset.source;
+  
+  imgLightBox.src = srcElem;
+  console.log(evt.target)
+  console.log(srcElem)
+  toOpenLightbox()
+  
+}
