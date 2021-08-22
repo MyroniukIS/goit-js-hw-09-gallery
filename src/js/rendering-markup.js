@@ -1,4 +1,4 @@
-import { galleryItems } from './db'
+import { galleryItems } from './app'
 
 //- Создание и рендер разметки по массиву данных `galleryItems` из `db.js` и предоставленному шаблону.
 export const gallery = document.querySelector('.js-gallery')

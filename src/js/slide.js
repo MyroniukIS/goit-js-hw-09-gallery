@@ -1,4 +1,4 @@
-import { galleryItems } from './db'
+import { galleryItems } from './app'
 import { currentLargeImage } from './current-large-image'
 
 //- Пролистывание изображений галереи в открытом модальном окне клавишами "влево" и "вправо".
