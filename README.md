@@ -1,3 +1,5 @@
+https://github.com/goitacademy/javascript-homework/tree/main/homework-09
+
 # Parcel boilerplate
 
 ## Скрытые файлы
